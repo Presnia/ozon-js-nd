@@ -15,4 +15,4 @@ const cart = () => {
   modalCross.addEventListener('click', closeCart);
 };
 
-cart();
+export default cart;
