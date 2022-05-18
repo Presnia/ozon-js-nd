@@ -1,5 +1,5 @@
 const getData = () => {
-  return fetch('https://jsonplaceholder.typicode.com/users').then((response) =>
+  return fetch('http://localhost:3000/goods').then((response) =>
     response.json()
   );
 };
