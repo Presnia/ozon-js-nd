@@ -1,7 +1,7 @@
 const getData = () => {
-  return fetch('http://localhost:3000/goods').then((response) =>
-    response.json()
-  );
+  return fetch(
+    'https://o-zone-nd-default-rtdb.europe-west1.firebasedatabase.app/goods.json'
+  ).then((response) => response.json());
 };
 
 export default getData;
