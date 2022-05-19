@@ -1,6 +1,6 @@
-const getData = () => {
+const getData = (str) => {
   return fetch(
-    'https://o-zone-nd-default-rtdb.europe-west1.firebasedatabase.app/goods.json'
+    `https://o-zone-nd-default-rtdb.europe-west1.firebasedatabase.app/goods.json`
   ).then((response) => response.json());
 };
 
