@@ -10,7 +10,16 @@ const filter = () => {
 
   minInput.addEventListener('input', () => {
     getData().then((data) =>
-      renderGoods(priceFilter(data, minInput.value, maxInput.value))
+      renderGoods(
+        priceFilter(
+          hotSaleFilter(
+            hotSaleFilter(data, checkBoxInput.checked),
+            checkBoxInput.checked
+          ),
+          minInput.value,
+          maxInput.value
+        )
+      )
     );
   });
   maxInput.addEventListener('input', () => {
@@ -26,7 +35,16 @@ const filter = () => {
     }
 
     getData().then((data) =>
-      renderGoods(hotSaleFilter(data, checkBoxInput.checked))
+      renderGoods(
+        priceFilter(
+          hotSaleFilter(
+            hotSaleFilter(data, checkBoxInput.checked),
+            checkBoxInput.checked
+          ),
+          minInput.value,
+          maxInput.value
+        )
+      )
     );
   });
 };
