@@ -9,6 +9,7 @@ const cart = () => {
   const goodsWrapper = document.querySelector('.goods');
   const cartWrapper = document.querySelector('.cart-wrapper');
   const cartSendBtn = document.querySelector('.cart-confirm');
+  const counter = document.querySelector('.counter');
 
   const openCart = () => {
     const cart = localStorage.getItem('cart')
@@ -44,6 +45,7 @@ const cart = () => {
       cart.push(goodItem);
 
       localStorage.setItem('cart', JSON.stringify(cart));
+      counter.textContent = cart.length;
     }
   });
 
@@ -67,6 +69,7 @@ const cart = () => {
       cartTotal.textContent = cart.reduce((sum, goodItem) => {
         return sum + goodItem.price;
       }, 0);
+      counter.textContent = cart.length;
     }
   });
 
